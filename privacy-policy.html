@@ -1,0 +1,359 @@
+ <!doctype html>
+  <html lang="en">
+  <head>                            
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AstroVenus Privacy Policy</title>
+  <link rel="stylesheet" 
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <style>
+    :root {
+      --bg: #FFFFFF;
+      --surface: #F8F7F6;
+      --border: #EBE9E7;
+      --ink: #3A2415;
+      --ink-muted: #8B7660;
+      --ink-faint: #A28B70;
+      --accent: #F45722;
+      --brass: #A9812C;
+      --brass-soft: #F6D9A0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #121212;
+        --surface: #1E1E1E;
+        --border: #2A2A2A;
+        --ink: #F5F5F5;
+        --ink-muted: #AAAAAA;
+        --ink-faint: #777777;
+        --accent: #F45722;
+        --brass: #D9B25C;
+        --brass-soft: #3A2E12;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #121212;
+      --surface: #1E1E1E;
+      --border: #2A2A2A;
+      --ink: #F5F5F5;
+      --ink-muted: #AAAAAA;
+      --ink-faint: #777777;
+      --accent: #F45722;
+      --brass: #D9B25C;
+      --brass-soft: #3A2E12;
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Manrope', system-ui, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    header.doc-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .mark {
+      width: 34px; height: 34px; flex: none;
+      border-radius: 50%;
+      background: conic-gradient(from 200deg, var(--accent), var(--brass), var(--accent));
+    }
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 19px;
+      letter-spacing: 0.02em;
+    }
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.15;
+      margin: 18px 0 6px;
+      text-wrap: balance;
+    }
+    .meta {
+      color: var(--ink-muted);
+      font-size: 13.5px;
+      margin-bottom: 34px;
+    }
+    .lede {
+      font-size: 15.5px;
+      color: var(--ink-muted);
+      max-width: 62ch;
+      margin: 0 0 36px;
+    }
+    nav.toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 44px;
+    }
+    nav.toc p {
+      margin: 0 0 10px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--brass);
+      text-transform: uppercase;
+    }
+    nav.toc ol {
+      margin: 0;
+      padding-left: 20px;
+      columns: 2;
+      column-gap: 24px;
+      font-size: 13.5px;
+    }
+    nav.toc li { margin-bottom: 7px; break-inside: avoid; }
+    nav.toc a { color: var(--ink); text-decoration: none; }
+    nav.toc a:hover { color: var(--accent); }
+
+    section.sec { margin-bottom: 40px; scroll-margin-top: 20px; }
+    section.sec h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 21px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 0 0 14px;
+    }
+    section.sec h2 .num {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+    }
+    section.sec p { margin: 0 0 12px; font-size: 15px; }
+    section.sec ul { margin: 0 0 12px; padding-left: 22px; font-size: 15px; }
+    section.sec li { margin-bottom: 8px; }
+    section.sec li b { color: var(--ink); }
+
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      margin: 18px 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    table.data-table th, table.data-table td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    table.data-table th {
+      background: var(--surface);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    table.data-table tr:last-child td { border-bottom: none; }
+    .table-wrap { overflow-x: auto; }
+
+    .callout {
+      border-left: 3px solid var(--accent);
+      background: var(--surface);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      color: var(--ink-muted);
+      margin: 16px 0;
+    }
+    .callout b { color: var(--ink); }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      font-size: 14.5px;
+    }
+    .contact-card .co {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+    .contact-card .row { margin-top: 6px; color: var(--ink-muted); }
+    .contact-card .row b { color: var(--ink); }
+
+    footer.doc-foot {
+      margin-top: 56px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--ink-faint);
+    }
+
+    a { color: var(--accent); }
+
+    @media (max-width: 480px) {
+      nav.toc ol { columns: 1; }
+    }
+  </style>
+  </head>
+  <body>
+  <div class="wrap">
+    <header class="doc-head">
+      <div class="mark"></div>
+      <div class="brand">AstroVenus</div>
+    </header>
+
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated September 30, 2026 &nbsp;·&nbsp; Applies to the AstroVenus user app and the AstroVenus Astrologer app</p>
+
+    <p class="lede">AstroVenus is an astrology consultation platform operated by Elevado Softwares. This policy explains, plainly, what information we
+  collect from you, why, and who we share it with — whether you're a user booking a consultation or an astrologer providing one.</p>
+
+    <nav class="toc">
+      <p>On this page</p>
+      <ol>
+        <li><a href="#collect">Information we collect</a></li>
+        <li><a href="#use">How we use it</a></li>
+        <li><a href="#share">Who we share it with</a></li>
+        <li><a href="#permissions">App permissions</a></li>
+        <li><a href="#retention">How long we keep it</a></li>
+        <li><a href="#rights">Your choices &amp; rights</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <section class="sec" id="collect">
+      <h2><span class="num">01</span> Information we collect</h2>
+      <p>We collect only what's needed to run a consultation platform: verify who you are, connect you with an astrologer, run the astrology
+  calculations you ask for, and process payment for the time you use.</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <tr><th>Category</th><th>What it includes</th><th>Why we collect it</th></tr>
+          <tr><td>Account</td><td>Phone number (verified by OTP); if you use Google Sign-In, your name, email and profile photo from
+  Google</td><td>Create and secure your account</td></tr>
+          <tr><td>Profile &amp; birth details</td><td>Name, gender, date, time and place of birth, preferred language</td><td>Generate your Kundli,
+  horoscope and matchmaking reports</td></tr>
+          <tr><td>Location</td><td>Device location, only if you grant permission</td><td>Confirm your place of birth, or find astrologers relevant to
+  your area</td></tr>
+          <tr><td>Consultations</td><td>Chat messages, call duration and connection metadata</td><td>Deliver the consultation and keep your history
+  accessible to you</td></tr>
+          <tr><td>Voice</td><td>Live microphone audio during a voice consultation only</td><td>Carry the call; we do not record consultation
+  audio</td></tr>
+          <tr><td>Payments &amp; wallet</td><td>Recharge amounts, wallet balance, transaction history</td><td>Process recharges and pay astrologers for
+  completed sessions</td></tr>
+          <tr><td>Astrologer verification <span style="color:var(--ink-faint)">(astrologer app only)</span></td><td>Professional credentials, KYC
+  identity documents, bank/payout details</td><td>Verify astrologers and settle payouts</td></tr>
+          <tr><td>Reviews</td><td>Ratings and written reviews you submit</td><td>Show other users what a consultation was like</td></tr>
+          <tr><td>Device &amp; usage</td><td>Device identifiers, crash reports, in-app activity</td><td>Keep the app working reliably, via Firebase
+  Analytics and Crashlytics</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="sec" id="use">
+      <h2><span class="num">02</span> How we use it</h2>
+      <ul>
+        <li><b>Run your account</b> — sign-in, identity verification, and account security.</li>
+        <li><b>Provide the service</b> — astrology calculations, matching you with an astrologer, live chat and voice consultations.</li>
+        <li><b>Handle payments</b> — process wallet recharges and pay out astrologer earnings.</li>
+        <li><b>Keep you informed</b> — push notifications and SMS about consultation status, wallet activity, or offers you can opt out of.</li>
+        <li><b>Support &amp; resolve disputes</b> — using your consultation and transaction history if you contact support.</li>
+        <li><b>Improve the app</b> — aggregated, non-identifying usage analytics.</li>
+        <li><b>Meet legal obligations</b> — tax and financial record-keeping for astrologer settlements.</li>
+      </ul>
+    </section>
+
+    <section class="sec" id="share">
+      <h2><span class="num">03</span> Who we share it with</h2>
+      <p>We do not sell your personal data. We share it only where it's needed to run the service:</p>
+      <ul>
+        <li><b>Firebase (Google)</b> — sign-in, push notifications, crash reporting and analytics.</li>
+        <li><b>Razorpay</b> — processes your wallet recharge payment. We never see or store your card, UPI or bank credentials ourselves.</li>
+        <li><b>Agora</b> — provides the real-time infrastructure your voice calls run over.</li>
+        <li><b>The other party in a consultation</b> — a user and astrologer see each other's display name and the chat/call needed to conduct the
+  session.</li>
+        <li><b>Legal authorities</b> — only when required by applicable law.</li>
+      </ul>
+    </section>
+
+    <section class="sec" id="permissions">
+      <h2><span class="num">04</span> App permissions</h2>
+      <p>Both apps request only the device permissions each feature genuinely needs, and every one is optional except where noted:</p>
+      <ul>
+        <li><b>Location</b> — confirms your birth place, or your current location if you tap "use current location." A manual search always works
+  without it.</li>
+        <li><b>Microphone</b> — active only for the duration of a live voice consultation you've started.</li>
+        <li><b>Notifications</b> — consultation and wallet alerts. Can be turned off in your device settings.</li>
+      </ul>
+      <div class="callout">Declining a permission may disable the specific feature it supports (e.g. voice calls without microphone access), but never
+  blocks the rest of the app.</div>
+    </section>
+
+    <section class="sec" id="retention">
+      <h2><span class="num">05</span> How long we keep it</h2>
+      <p>We keep your account, consultation and transaction records for as long as your account stays active, and for as long as applicable financial
+  and tax record-keeping rules require after that. In-app notifications are automatically deleted after 60 days. You can ask us to delete your account
+  and associated data at any time — see <a href="#contact">Contact us</a> — subject to records we're legally obligated to retain.</p>
+    </section>
+
+    <section class="sec" id="rights">
+      <h2><span class="num">06</span> Your choices &amp; rights</h2>
+      <ul>
+        <li>Edit your profile and birth details any time from within the app.</li>
+        <li>Decline location or microphone access from your device settings — the relevant feature will prompt you again only if you use it.</li>
+        <li>Request a copy of, correction to, or deletion of your personal data by writing to us (below).</li>
+        <li>Unsubscribe from promotional notifications while still receiving essential account/consultation alerts.</li>
+      </ul>
+    </section>
+
+    <section class="sec" id="children">
+      <h2><span class="num">07</span> Children</h2>
+      <p>AstroVenus is intended for users 18 and older. We do not knowingly collect personal information from children, and we remove any account we
+  learn belongs to a child.</p>
+    </section>
+
+    <section class="sec" id="security">
+      <h2><span class="num">08</span> Security</h2>
+      <p>We use encrypted connections (HTTPS/TLS) for all data in transit, and access controls that limit who inside our organization can view your
+  data. No system is perfectly secure, and we can't guarantee absolute security — but we treat a breach of your data as seriously as you'd expect.</p>
+    </section>
+
+    <section class="sec" id="changes">
+      <h2><span class="num">09</span> Changes to this policy</h2>
+      <p>We may update this policy as the app changes. Material changes will be announced in-app before they take effect; the date at the top of this
+  page always reflects the latest version.</p>
+    </section>
+
+    <section class="sec" id="contact">
+      <h2><span class="num">10</span> Contact us</h2>
+      <div class="contact-card">
+        <div class="co">Elevado Softwares</div>
+        <div class="row">Operator of AstroVenus (User &amp; Astrologer apps)</div>
+        <div class="row"><b>Email:</b> <span id="contact-email">privacy@astrovenus.app</span></div>
+      </div>
+    </section>
+
+    <footer class="doc-foot">
+      This policy is specific to the AstroVenus User and Astrologer apps and covers all personal data described above. It does not apply to third-party
+  sites you may reach by following a link from within the app.
+    </footer>
+  </div>
+  </body>
+  </html>
