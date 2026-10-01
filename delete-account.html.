@@ -1,0 +1,262 @@
+ <!doctype html>
+  <html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete Your AstroVenus Account</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <style>
+    :root {
+      --bg: #FFFFFF;
+      --surface: #F8F7F6;
+      --border: #EBE9E7;
+      --ink: #3A2415;
+      --ink-muted: #8B7660;
+      --ink-faint: #A28B70;
+      --accent: #F45722;
+      --brass: #A9812C;
+      --brass-soft: #F6D9A0;
+      --danger: #B3261E;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #121212;
+        --surface: #1E1E1E;
+        --border: #2A2A2A;
+        --ink: #F5F5F5;
+        --ink-muted: #AAAAAA;
+        --ink-faint: #777777;
+        --accent: #F45722;
+        --brass: #D9B25C;
+        --brass-soft: #3A2E12;
+        --danger: #FF6B61;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #121212;
+      --surface: #1E1E1E;
+      --border: #2A2A2A;
+      --ink: #F5F5F5;
+      --ink-muted: #AAAAAA;
+      --ink-faint: #777777;
+      --accent: #F45722;
+      --brass: #D9B25C;
+      --brass-soft: #3A2E12;
+      --danger: #FF6B61;
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Manrope', system-ui, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    header.doc-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .mark {
+      width: 34px; height: 34px; flex: none;
+      border-radius: 50%;
+      background: conic-gradient(from 200deg, var(--accent), var(--brass), var(--accent));
+    }
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 19px;
+      letter-spacing: 0.02em;
+    }
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: clamp(26px, 5vw, 36px);
+      line-height: 1.15;
+      margin: 18px 0 6px;
+      text-wrap: balance;
+    }
+    .meta {
+      color: var(--ink-muted);
+      font-size: 13.5px;
+      margin-bottom: 34px;
+    }
+    .lede {
+      font-size: 15.5px;
+      color: var(--ink-muted);
+      max-width: 60ch;
+      margin: 0 0 36px;
+    }
+
+    section.sec { margin-bottom: 36px; }
+    section.sec h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 20px;
+      margin: 0 0 14px;
+    }
+    section.sec p { margin: 0 0 12px; font-size: 15px; }
+    section.sec ul, section.sec ol { margin: 0 0 12px; padding-left: 22px; font-size: 15px; }
+    section.sec li { margin-bottom: 8px; }
+    section.sec li b { color: var(--ink); }
+
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 36px;
+    }
+    .step-card h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 20px;
+      margin: 0 0 16px;
+    }
+    .step {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .step .n {
+      flex: none;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      font-size: 12.5px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .step .t { font-size: 14.5px; padding-top: 3px; }
+    .step .t b { color: var(--ink); }
+
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      margin: 4px 0 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    table.data-table th, table.data-table td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    table.data-table th {
+      background: var(--surface);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    table.data-table tr:last-child td { border-bottom: none; }
+    .table-wrap { overflow-x: auto; }
+
+    .callout {
+      border-left: 3px solid var(--accent);
+      background: var(--surface);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      color: var(--ink-muted);
+      margin: 16px 0;
+    }
+    .callout b { color: var(--ink); }
+    .callout.warn { border-left-color: var(--danger); }
+
+    footer.doc-foot {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--ink-faint);
+    }
+
+    a { color: var(--accent); }
+  </style>
+  </head>
+  <body>
+  <div class="wrap">
+    <header class="doc-head">
+      <div class="mark"></div>
+      <div class="brand">AstroVenus</div>
+    </header>
+
+    <h1>Delete Your Account</h1>
+    <p class="meta">Applies to the AstroVenus user app and the AstroVenus Astrologer app</p>
+
+    <p class="lede">You can permanently delete your AstroVenus account at any time, right from the app. This page explains how, what's removed, and what's retained.</p>
+
+    <div class="step-card">
+      <h2>How to request deletion</h2>
+      <div class="step">
+        <div class="n">1</div>
+        <div class="t">Open the app and go to <b>Profile / Settings → Delete My Account</b>.</div>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <div class="t">Tap <b>"Send OTP to Confirm"</b> — we'll send a one-time code to your registered phone number.</div>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <div class="t">Enter the OTP and tap <b>"Permanently Delete My Account."</b> This takes effect immediately — there's no waiting period and no email to send.</div>
+      </div>
+    </div>
+
+    <section class="sec">
+      <h2>What gets deleted</h2>
+      <ul>
+        <li>Your phone number and email address are permanently removed from your account</li>
+        <li>Your login access is permanently blocked — you cannot sign back into this account, by OTP or otherwise</li>
+        <li>Your phone number is freed up and can register as a brand-new, separate account going forward</li>
+        <li>Every active session and signed-in device is immediately signed out</li>
+      </ul>
+    </section>
+
+    <section class="sec">
+      <h2>What's retained, and why</h2>
+      <p>Deleting an account removes your identity and login access, not the historical records tied to it — those stay in our systems, no longer connected to any contact
+  details or login you control:</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <tr><th>Data</th><th>Why it's kept</th></tr>
+          <tr><td>Consultation history, chat messages, call records</td><td>Operational/billing records of past sessions</td></tr>
+          <tr><td>Wallet recharge and payment transaction records</td><td>Financial and tax record-keeping obligations under applicable law</td></tr>
+          <tr><td>Reviews you've written</td><td>Kept as part of an astrologer's public record, no longer linked to you</td></tr>
+          <tr><td>Astrologer settlement, payout, and KYC/verification records</td><td>Required financial and compliance record-keeping</td></tr>
+        </table>
+      </div>
+      <div class="callout">None of this is accessible to you, to the person it's about, or shown as "yours" anywhere in the app once your account is deleted — it simply isn't
+  erased outright, the way financial and consultation records generally aren't for any platform like this one. If you'd like a specific record fully erased beyond what's
+  described here, contact us (below) and we'll evaluate what's possible under applicable law.</div>
+    </section>
+
+    <section class="sec">
+      <h2>Deactivating vs. deleting</h2>
+      <p>The <b>"Deactivate account"</b> option inside the app's Settings is different from deletion described here — deactivating just hides your account and signs you out;
+  logging back in with your phone number reactivates it automatically, and nothing changes. Deletion is a separate, OTP-confirmed action in the same Settings area.</p>
+      <div class="callout warn"><b>Deletion is permanent.</b> Once confirmed, you cannot sign back into this account, and this cannot be undone by logging back in or contacting
+  support.</div>
+    </section>
+
+    <footer class="doc-foot">
+      Questions about this process or your data generally? See our <a href="privacy-policy.html">Privacy Policy</a> or email privacy@astrovenus.app.
+    </footer>
+  </div>
+  </body>
+  </html>
